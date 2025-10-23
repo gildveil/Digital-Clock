@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital Clock</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <button class="nav-btn active" id="nav-clock">Clock</button>
+    <button class="nav-btn" id="nav-stopwatch">Stopwatch</button>
+    <button class="nav-btn" id="nav-timer">Timer</button>
+    <button class="nav-btn" id="nav-alarm">Alarm</button>
+  </nav>
+
+  <!-- Clock -->
+  <div class="container" id="clock-container">
+    <h1 id="clock"></h1>
+    <p id="date"></p>
+  </div>
+
+  <!-- Stopwatch -->
+  <div class="container hidden" id="stopwatch-container">
+    <h1 id="stopwatch">00:00:00</h1>
+    <div class="controls">
+      <button id="startStopwatch">Start</button>
+      <button id="pauseStopwatch">Pause</button>
+      <button id="resetStopwatch">Reset</button>
+    </div>
+  </div>
+
+  <!-- Timer -->
+  <div class="container hidden" id="timer-container">
+    <h1 id="timer-display">
+      <span contenteditable="true" id="hours">00</span>:
+      <span contenteditable="true" id="minutes">00</span>:
+      <span contenteditable="true" id="seconds">00</span>
+    </h1>
+    <div class="controls">
+      <button id="startTimer">Start</button>
+      <button id="pauseTimer">Pause</button>
+      <button id="resetTimer">Reset</button>
+    </div>
+  </div>
+
+  <!-- Alarm -->
+  <div class="container hidden" id="alarm-container">
+    <h2>Set Alarm</h2>
+    <div class="alarm-inputs">
+      <input type="date" id="alarm-date">
+      <input type="time" id="alarm-time">
+      <button id="addAlarm">Add Alarm</button>
+    </div>
+    <ul id="alarm-list"></ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

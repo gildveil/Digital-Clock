@@ -1,0 +1,151 @@
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #f5f6fa;
+  color: #2f3640;
+}
+
+/* Navbar */
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  background: #ffffff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 12px 0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.nav-btn {
+  background: transparent;
+  border: 2px solid #2f3640;
+  color: #2f3640;
+  padding: 8px 20px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.nav-btn.active, .nav-btn:hover {
+  background: #2f3640;
+  color: #ffffff;
+}
+
+/* Containers */
+.container {
+  text-align: center;
+  background: #ffffff;
+  border: 2px solid #dcdde1;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  padding: 40px 60px;
+  margin-top: 50px;
+  width: 320px;
+  max-width: 90%;
+  transition: 0.3s ease;
+}
+
+.hidden { display: none; }
+
+/* Clock */
+#clock {
+  font-size: 60px;
+  font-weight: 500;
+  margin: 0;
+}
+
+#date {
+  font-size: 18px;
+  color: #718093;
+  margin-top: 10px;
+}
+
+/* Stopwatch & Timer */
+#stopwatch, #timer-display {
+  font-size: 50px;
+  margin: 20px 0;
+  font-weight: 500;
+}
+
+.controls button {
+  background: transparent;
+  border: 2px solid #2f3640;
+  color: #2f3640;
+  font-size: 14px;
+  padding: 8px 18px;
+  margin: 5px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.controls button:hover {
+  background: #2f3640;
+  color: #ffffff;
+}
+
+#timer-display span {
+  display: inline-block;
+  min-width: 40px;
+  padding: 5px 8px;
+  border-radius: 6px;
+  border: 1px solid #dcdde1;
+  text-align: center;
+  cursor: text;
+}
+
+#timer-display span:focus {
+  outline: 2px solid #2f3640;
+  background-color: #f0f0f0;
+}
+
+.disabled {
+  cursor: not-allowed;
+  background-color: #f5f6fa !important;
+}
+
+/* Alarm */
+.alarm-inputs {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+#alarm-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+#alarm-list li {
+  background: #f5f6fa;
+  border: 1px solid #dcdde1;
+  border-radius: 8px;
+  padding: 8px 12px;
+  margin-bottom: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#alarm-list button {
+  border: none;
+  background: #e84118;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#alarm-list button:hover {
+  background: #c23616;
+}
